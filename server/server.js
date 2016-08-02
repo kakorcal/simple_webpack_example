@@ -1,3 +1,4 @@
+// this server is only currently used to check/debug the webpack.config file
 const server = require('express')();
 const config = require('../webpack.config');
 

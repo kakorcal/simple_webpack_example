@@ -29,8 +29,13 @@ module.exports = {
     // name of the bundled file
     filename: 'bundle.js'
   },
+  // list of plugins to use. to view entire list,
+  // go to https://webpack.github.io/docs/list-of-plugins.html
   plugins: [
+    // minify js code
     new webpack.optimize.UglifyJsPlugin(),
+    // counts how many times a module is used. 
+    // optimizes its usage depending on its count.
     new webpack.optimize.OccurrenceOrderPlugin()
   ],
   module: {

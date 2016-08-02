@@ -3,4 +3,5 @@
 # Resources
   * https://github.com/AriaFallah/WebpackTutorial/tree/master/part1
   * https://github.com/petehunt/webpack-howto
+  * http://survivejs.com/webpack/introduction/
 
