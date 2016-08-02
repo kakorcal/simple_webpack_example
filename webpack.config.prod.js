@@ -46,7 +46,14 @@ module.exports = {
     // generates an index.html file inside your dist directory
     // using ./src/index.html as a template. you don't need to include
     // bundle.js in the html file as the plugin will automatically do that.
-    new HtmlWebpackPlugin({template: './src/index.html'})
+    new HtmlWebpackPlugin({template: './src/index.html'}),
+    // DefinePlugin lets you create global constants. 
+    // useful to discern if you are in development or production
+    // https://github.com/webpack/docs/wiki/list-of-plugins#defineplugin
+    new webpack.DefinePlugin({
+      // you need to use JSON.stringify or use '"production"'
+      'process.env.NODE_ENV': JSON.stringify('production')
+    })
   ],
   module: {
     // a list of stuff you want to modularize (ie. you can include them using require or export using module.exports)
