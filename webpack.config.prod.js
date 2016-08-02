@@ -1,13 +1,13 @@
 //***************************************************************************
   // what does this file do?
    /*
-    bundles js files into a single file
-    lets you use files inside node_modules for the front-end
-    loads compliers in order to use stuff like es2015 and sass
-    minifies and optimizes files
-    lets you include any type of file inside your js file 
-    hot module replacement - automatically updates changes in browser without
-    having to refresh the page
+    • bundles js files into a single file
+    • lets you use files inside node_modules for the front-end
+    • loads compliers in order to use stuff like es2015 and sass
+    • minifies and optimizes files
+    • lets you include any type of file inside your js file 
+    • hot module replacement - automatically updates changes in browser without
+      having to refresh the page
    */  
 //***************************************************************************
 
@@ -49,11 +49,22 @@ module.exports = {
     new HtmlWebpackPlugin({template: './src/index.html'})
   ],
   module: {
-    // a list of stuff you want to modularize (ie. using require, import, export)
+    // a list of stuff you want to modularize (ie. you can include them using require or export using module.exports)
     loaders: [
       {
-        test: /\.scss$/,
+        // what extensions should be applied with the particular loader
+        test: /\.css$/,
         loaders: ['style', 'css', 'sass']
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel',
+        // use babel-loader only for files in the src directory
+        include: path.join(__dirname, 'src'),
+        // loaders accept query parameters. this can be used to pass configuration to the loader.
+        query: {
+          presets: ['es2015']
+        }
       }
     ]
   }
