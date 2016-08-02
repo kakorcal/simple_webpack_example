@@ -1,12 +1,10 @@
-h1 {
-  color: rgb(114, 191, 190);
+#title {
+  color: #000;
 }
 
-button {
+#colorButton {
   cursor: pointer;
-  display: block;
-  width: 100px;
-  outline: 0;
-  border: 0;
-  margin: 20px auto;
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: #8ddaf7;
 }
