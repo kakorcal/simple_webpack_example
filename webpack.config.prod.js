@@ -6,8 +6,7 @@
     • loads compliers in order to use stuff like es2015 and sass
     • minifies and optimizes files
     • lets you include any type of file inside your js file 
-    • hot module replacement - automatically updates changes in browser without
-      having to refresh the page
+    • hot module replacement - automatically updates changes in browser without having to refresh the page
    */  
 //***************************************************************************
 
@@ -22,7 +21,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   // helps to debug code in the browser console by displaying pre-processed code.
-  devtool: 'source-map',
+  devtool: 'cheap-eval-source-map',
   // what file you want to start the bundling process.
   // you can have multiple entry points 
   entry: ['./src/index'],

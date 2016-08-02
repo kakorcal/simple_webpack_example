@@ -6,8 +6,7 @@
     • loads compliers in order to use stuff like es2015 and sass
     • minifies and optimizes files
     • lets you include any type of file inside your js file 
-    • hot module replacement - automatically updates changes in browser without
-      having to refresh the page
+    • hot module replacement - automatically updates changes in browser without having to refresh the page
    */  
 //***************************************************************************
 
