@@ -4,17 +4,17 @@ if(module.hot) module.hot.accept();
 require('./index.html');
 require('./styles.css');
 
-// generates random color
-var Please = require('pleasejs');
-var title = document.getElementById('title');
-var color = document.getElementById('color');
-var button = document.getElementById('colorButton');
+// generates random colors
+import Please from 'pleasejs';
+
+const title = document.getElementById('title');
+const color = document.getElementById('color');
+const button = document.getElementById('colorButton');
+const changeColor = ()=>{
+  title.style.color = Please.make_color();
+  color.innerText = title.style.color;
+};
 
 color.innerText = window.getComputedStyle(title, null).color;
 
 button.addEventListener('click', changeColor);
-
-function changeColor(){
-  title.style.color = Please.make_color();
-  color.innerText = title.style.color;
-}
