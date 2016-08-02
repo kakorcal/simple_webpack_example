@@ -15,6 +15,8 @@
 const path = require('path');
 // we need to require webpack in order to use its plugins
 const webpack = require('webpack');
+// generates a html file
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 eval(require('locus'));
 module.exports = {
   // what file you want to start the bundling process.
@@ -36,9 +38,14 @@ module.exports = {
     new webpack.optimize.UglifyJsPlugin(),
     // counts how many times a module is used. 
     // optimizes its usage depending on its count.
-    new webpack.optimize.OccurrenceOrderPlugin()
+    new webpack.optimize.OccurrenceOrderPlugin(),
+    // generates an index.html file inside your dist directory
+    // using ./src/index.html as a template. you don't need to include
+    // bundle.js in the html file as the plugin will automatically do that.
+    new HtmlWebpackPlugin({template: './src/index.html'})
   ],
   module: {
+    // a list of stuff you want to modularize (ie. using require, import, export)
     loaders: [
       {
         test: /\.scss$/,
