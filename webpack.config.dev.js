@@ -19,7 +19,7 @@ const path = require('path');
 const webpack = require('webpack');
 // generates a html file
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-eval(require('locus'));
+
 module.exports = {
   // helps to debug code in the browser console by displaying pre-processed code.
   devtool: 'source-map',
