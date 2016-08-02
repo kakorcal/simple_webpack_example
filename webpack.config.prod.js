@@ -11,6 +11,8 @@
    */  
 //***************************************************************************
 
+// use npm run build for production
+
 // built-in node module which gives helpers methods concerning url paths
 const path = require('path');
 // we need to require webpack in order to use its plugins
