@@ -30,6 +30,7 @@
   "dependencies": {
     "angular": "^1.5.8",
     "angular-ui-router": "^0.3.1",
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "pleasejs": "^0.4.2"
   }
 }
